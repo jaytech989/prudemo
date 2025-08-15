@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/iciciprulife/:/",
-    "/content/iciciprulife/configuration:/.helix/config.json",
-    "/content/iciciprulife/metadata:/metadata.json"
+    "/content/i-pru/:/",
+    "/content/i-pru/configuration:/.helix/config.json",
+    "/content/i-pru/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/iciciprulife/"
+    "/content/i-pru/"
   ]
 }
