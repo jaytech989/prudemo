@@ -2,29 +2,29 @@
     "definitions": [
       {
         "title": "Ipru Hero",
-        "id": "ipru-heros",
+        "id": "ipru-hero",
         "plugins": {
           "xwalk": {
             "page": {
               "resourceType": "core/franklin/components/block/v1/block",
               "template": {
-                "name": "Ipru Heros",
-                "filter": "ipru-heros"
+                "name": "Ipru Hero",
+                "filter": "ipru-hero"
               }
             }
           }
         }
       },
       {
-        "title": "Ipru Hero",
-        "id": "ipru-hero",
+        "title": "Ipru Hero Child",
+        "id": "ipru-hero-child",
         "plugins": {
           "xwalk": {
             "page": {
               "resourceType": "core/franklin/components/block/v1/block/item",
               "template": {
-                "name": "Ipru Hero",
-                "model": "ipru-hero"
+                "name": "Ipru Hero Child",
+                "model": "ipru-hero-child"
               }
             }
           }
@@ -33,7 +33,7 @@
     ],
     "models": [
       {
-        "id": "ipru-hero",
+        "id": "ipru-hero-child",
         "fields": [
           {
             "component": "reference",
@@ -54,9 +54,9 @@
     ],
     "filters": [
       {
-        "id": "ipru-heros",
+        "id": "ipru-hero",
         "components": [
-          "ipru-hero"
+          "ipru-hero-child"
         ]
       }
     ]
