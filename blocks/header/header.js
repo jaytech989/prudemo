@@ -1,166 +1,328 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
+export default function decorate(block) {
+  const container = document.createElement('div');
+  container.setAttribute('class', 'container');
 
-// media query match that indicates mobile/tablet width
-const isDesktop = window.matchMedia('(min-width: 900px)');
+  const navEl = document.createElement('nav');
+  navEl.setAttribute('id', 'nav');
 
-function closeOnEscape(e) {
-  if (e.code === 'Escape') {
-    const nav = document.getElementById('nav');
-    const navSections = nav.querySelector('.nav-sections');
-    const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
-    if (navSectionExpanded && isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleAllNavSections(navSections);
-      navSectionExpanded.focus();
-    } else if (!isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleMenu(nav, navSections);
-      nav.querySelector('button').focus();
-    }
-  }
-}
+    const divEl = document.createElement('div');
+    divEl.setAttribute('class', 'section nav-brand');
+    divEl.setAttribute('data-section-status', 'loaded');
+    divEl.setAttribute('style', '');
+  navEl.append(divEl);
 
-function closeOnFocusLost(e) {
-  const nav = e.currentTarget;
-  if (!nav.contains(e.relatedTarget)) {
-    const navSections = nav.querySelector('.nav-sections');
-    const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
-    if (navSectionExpanded && isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleAllNavSections(navSections, false);
-    } else if (!isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleMenu(nav, navSections, false);
-    }
-  }
-}
+    const divEl2 = document.createElement('div');
+    divEl2.setAttribute('class', 'section nav-sections');
+    divEl2.setAttribute('data-section-status', 'loaded');
+    divEl2.setAttribute('style', '');
+  navEl.append(divEl2);
 
-function openOnKeydown(e) {
-  const focused = document.activeElement;
-  const isNavDrop = focused.className === 'nav-drop';
-  if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
-    const dropExpanded = focused.getAttribute('aria-expanded') === 'true';
-    // eslint-disable-next-line no-use-before-define
-    toggleAllNavSections(focused.closest('.nav-sections'));
-    focused.setAttribute('aria-expanded', dropExpanded ? 'false' : 'true');
-  }
-}
+    const divEl3 = document.createElement('div');
+    divEl3.setAttribute('class', 'section ipru-nav-1-container nav-tools');
+    divEl3.setAttribute('data-section-status', 'loaded');
+    divEl3.setAttribute('style', '');
 
-function focusNavSection() {
-  document.activeElement.addEventListener('keydown', openOnKeydown);
-}
+      const divEl4 = document.createElement('div');
+      divEl4.setAttribute('class', 'ipru-nav-1-wrapper');
 
-/**
- * Toggles all nav sections
- * @param {Element} sections The container element
- * @param {Boolean} expanded Whether the element should be expanded or collapsed
- */
-function toggleAllNavSections(sections, expanded = false) {
-  sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
-    section.setAttribute('aria-expanded', expanded);
-  });
-}
+        const divEl5 = document.createElement('div');
+        divEl5.setAttribute('class', 'ipru-nav-1 block');
+        divEl5.setAttribute('data-block-name', 'ipru-nav-1');
+        divEl5.setAttribute('data-block-status', 'loaded');
 
-/**
- * Toggles the entire nav
- * @param {Element} nav The container element
- * @param {Element} navSections The nav sections within the container element
- * @param {*} forceExpanded Optional param to force nav expand behavior when not null
- */
-function toggleMenu(nav, navSections, forceExpanded = null) {
-  const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
-  const button = nav.querySelector('.nav-hamburger button');
-  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
-  nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-  toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
-  button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
-  // enable nav dropdown keyboard accessibility
-  const navDrops = navSections.querySelectorAll('.nav-drop');
-  if (isDesktop.matches) {
-    navDrops.forEach((drop) => {
-      if (!drop.hasAttribute('tabindex')) {
-        drop.setAttribute('tabindex', 0);
-        drop.addEventListener('focus', focusNavSection);
-      }
-    });
-  } else {
-    navDrops.forEach((drop) => {
-      drop.removeAttribute('tabindex');
-      drop.removeEventListener('focus', focusNavSection);
-    });
-  }
+          const divEl6 = document.createElement('div');
+          divEl6.setAttribute('class', 'ipru-header');
 
-  // enable menu collapse on escape keypress
-  if (!expanded || isDesktop.matches) {
-    // collapse menu on escape press
-    window.addEventListener('keydown', closeOnEscape);
-    // collapse menu on focus lost
-    nav.addEventListener('focusout', closeOnFocusLost);
-  } else {
-    window.removeEventListener('keydown', closeOnEscape);
-    nav.removeEventListener('focusout', closeOnFocusLost);
-  }
-}
+            const divEl7 = document.createElement('div');
+            divEl7.setAttribute('class', 'ipru-nav-logo');
 
-/**
- * loads and decorates the header, mainly the nav
- * @param {Element} block The header block element
- */
-export default async function decorate(block) {
-  // load nav as fragment
-  const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
-  const fragment = await loadFragment(navPath);
+              const pictureEl = document.createElement('picture');
 
-  // decorate nav DOM
+                const sourceEl = document.createElement('source');
+                sourceEl.setAttribute('type', 'image/webp');
+                sourceEl.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_13276062cc939e5cde0036a2f69a45824e90362a3.png?width=2000&format=webply&optimize=medium');
+                sourceEl.setAttribute('media', '(min-width: 600px)');
+              pictureEl.append(sourceEl);
+
+                const sourceEl2 = document.createElement('source');
+                sourceEl2.setAttribute('type', 'image/webp');
+                sourceEl2.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_13276062cc939e5cde0036a2f69a45824e90362a3.png?width=750&format=webply&optimize=medium');
+              pictureEl.append(sourceEl2);
+
+                const sourceEl3 = document.createElement('source');
+                sourceEl3.setAttribute('type', 'image/png');
+                sourceEl3.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_13276062cc939e5cde0036a2f69a45824e90362a3.png?width=2000&format=png&optimize=medium');
+                sourceEl3.setAttribute('media', '(min-width: 600px)');
+              pictureEl.append(sourceEl3);
+
+                const imgEl = document.createElement('img');
+                imgEl.setAttribute('loading', 'lazy');
+                imgEl.setAttribute('alt', '');
+                imgEl.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_13276062cc939e5cde0036a2f69a45824e90362a3.png?width=750&format=png&optimize=medium');
+                imgEl.setAttribute('width', '242');
+                imgEl.setAttribute('height', '46');
+              pictureEl.append(imgEl);
+            divEl7.append(pictureEl);
+          divEl6.append(divEl7);
+
+            const divEl8 = document.createElement('div');
+            divEl8.setAttribute('class', 'ipru-search-bar');
+
+              const divEl9 = document.createElement('div');
+              divEl9.setAttribute('class', 'search-bar-container');
+
+                const divEl10 = document.createElement('div');
+                divEl10.setAttribute('class', 'search-bar');
+
+                  const inputEl = document.createElement('input');
+                  inputEl.setAttribute('type', 'text');
+                  inputEl.setAttribute('placeholder', 'Search');
+                divEl10.append(inputEl);
+
+                  const spanEl = document.createElement('span');
+                  spanEl.setAttribute('class', 'search-icon');
+
+                    const imgEl2 = document.createElement('img');
+                    imgEl2.setAttribute('src', '../../images/ipru-nav-img/search-maroon.png');
+                    imgEl2.setAttribute('alt', 'Search Icon');
+                  spanEl.append(imgEl2);
+                divEl10.append(spanEl);
+              divEl9.append(divEl10);
+            divEl8.append(divEl9);
+          divEl6.append(divEl8);
+
+            const divEl11 = document.createElement('div');
+            divEl11.setAttribute('class', 'ipru-nav-items');
+
+              const ulEl = document.createElement('ul');
+
+                const liEl = document.createElement('li');
+
+                  const aEl = document.createElement('a');
+                  aEl.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl.setAttribute('title', 'About Us');
+                  aEl.textContent = 'About Us';
+                liEl.append(aEl);
+              ulEl.append(liEl);
+
+                const liEl2 = document.createElement('li');
+
+                  const aEl2 = document.createElement('a');
+                  aEl2.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl2.setAttribute('title', 'Careers');
+                  aEl2.textContent = 'Careers';
+                liEl2.append(aEl2);
+              ulEl.append(liEl2);
+
+                const liEl3 = document.createElement('li');
+
+                  const aEl3 = document.createElement('a');
+                  aEl3.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl3.setAttribute('title', 'Contact Us');
+                  aEl3.textContent = 'Contact Us';
+                liEl3.append(aEl3);
+              ulEl.append(liEl3);
+            divEl11.append(ulEl);
+          divEl6.append(divEl11);
+
+            const divEl12 = document.createElement('div');
+            divEl12.setAttribute('class', 'button-container ipru-track-app');
+
+              const pEl = document.createElement('p');
+
+                const aEl4 = document.createElement('a');
+                aEl4.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                aEl4.setAttribute('title', 'Track Application');
+                aEl4.setAttribute('class', 'button');
+                aEl4.textContent = 'Track Application';
+              pEl.append(aEl4);
+            divEl12.append(pEl);
+          divEl6.append(divEl12);
+
+            const divEl13 = document.createElement('div');
+            divEl13.setAttribute('class', 'ipru-noti-icon');
+
+              const pictureEl2 = document.createElement('picture');
+
+                const sourceEl4 = document.createElement('source');
+                sourceEl4.setAttribute('type', 'image/webp');
+                sourceEl4.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1ff2081ae9db621cea15a00d358e00a207d99d939.png?width=2000&format=webply&optimize=medium');
+                sourceEl4.setAttribute('media', '(min-width: 600px)');
+              pictureEl2.append(sourceEl4);
+
+                const sourceEl5 = document.createElement('source');
+                sourceEl5.setAttribute('type', 'image/webp');
+                sourceEl5.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1ff2081ae9db621cea15a00d358e00a207d99d939.png?width=750&format=webply&optimize=medium');
+              pictureEl2.append(sourceEl5);
+
+                const sourceEl6 = document.createElement('source');
+                sourceEl6.setAttribute('type', 'image/png');
+                sourceEl6.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1ff2081ae9db621cea15a00d358e00a207d99d939.png?width=2000&format=png&optimize=medium');
+                sourceEl6.setAttribute('media', '(min-width: 600px)');
+              pictureEl2.append(sourceEl6);
+
+                const imgEl3 = document.createElement('img');
+                imgEl3.setAttribute('loading', 'lazy');
+                imgEl3.setAttribute('alt', '');
+                imgEl3.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_1ff2081ae9db621cea15a00d358e00a207d99d939.png?width=750&format=png&optimize=medium');
+                imgEl3.setAttribute('width', '30');
+                imgEl3.setAttribute('height', '30');
+              pictureEl2.append(imgEl3);
+            divEl13.append(pictureEl2);
+          divEl6.append(divEl13);
+
+            const divEl14 = document.createElement('div');
+            divEl14.setAttribute('class', 'button-container ipru-nav-login');
+
+              const pEl2 = document.createElement('p');
+
+                const aEl5 = document.createElement('a');
+                aEl5.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                aEl5.setAttribute('title', 'Login');
+                aEl5.setAttribute('class', 'button');
+                aEl5.textContent = 'Login';
+              pEl2.append(aEl5);
+            divEl14.append(pEl2);
+          divEl6.append(divEl14);
+        divEl5.append(divEl6);
+      divEl4.append(divEl5);
+    divEl3.append(divEl4);
+  navEl.append(divEl3);
+
+    const divEl15 = document.createElement('div');
+    divEl15.setAttribute('class', 'section ipru-nav-2-container');
+    divEl15.setAttribute('data-section-status', 'loaded');
+    divEl15.setAttribute('style', '');
+
+      const divEl16 = document.createElement('div');
+      divEl16.setAttribute('class', 'ipru-nav-2-wrapper');
+
+        const divEl17 = document.createElement('div');
+        divEl17.setAttribute('class', 'ipru-nav-2 block');
+        divEl17.setAttribute('data-block-name', 'ipru-nav-2');
+        divEl17.setAttribute('data-block-status', 'loaded');
+
+          const divEl18 = document.createElement('div');
+          divEl18.setAttribute('class', 'ipru-header-2');
+
+            const divEl19 = document.createElement('div');
+            divEl19.setAttribute('class', 'ipru-nav-list');
+
+              const ulEl2 = document.createElement('ul');
+
+                const liEl4 = document.createElement('li');
+
+                  const aEl6 = document.createElement('a');
+                  aEl6.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl6.setAttribute('title', 'Plans');
+                  aEl6.textContent = 'Plans';
+                liEl4.append(aEl6);
+              ulEl2.append(liEl4);
+
+                const liEl5 = document.createElement('li');
+
+                  const aEl7 = document.createElement('a');
+                  aEl7.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl7.setAttribute('title', 'Term Insurance');
+                  aEl7.textContent = 'Term Insurance';
+                liEl5.append(aEl7);
+              ulEl2.append(liEl5);
+
+                const liEl6 = document.createElement('li');
+
+                  const aEl8 = document.createElement('a');
+                  aEl8.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl8.setAttribute('title', 'Claims');
+                  aEl8.textContent = 'Claims';
+                liEl6.append(aEl8);
+              ulEl2.append(liEl6);
+
+                const liEl7 = document.createElement('li');
+
+                  const aEl9 = document.createElement('a');
+                  aEl9.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl9.setAttribute('title', 'Library');
+                  aEl9.textContent = 'Library';
+                liEl7.append(aEl9);
+              ulEl2.append(liEl7);
+
+                const liEl8 = document.createElement('li');
+
+                  const aEl10 = document.createElement('a');
+                  aEl10.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl10.setAttribute('title', 'Customer Services');
+                  aEl10.textContent = 'Customer Services';
+                liEl8.append(aEl10);
+              ulEl2.append(liEl8);
+
+                const liEl9 = document.createElement('li');
+
+                  const aEl11 = document.createElement('a');
+                  aEl11.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl11.setAttribute('title', 'Public Disclosure');
+                  aEl11.textContent = 'Public Disclosure';
+                liEl9.append(aEl11);
+              ulEl2.append(liEl9);
+
+                const liEl10 = document.createElement('li');
+
+                  const aEl12 = document.createElement('a');
+                  aEl12.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl12.setAttribute('title', 'Tax Center');
+                  aEl12.textContent = 'Tax Center';
+                liEl10.append(aEl12);
+              ulEl2.append(liEl10);
+
+                const liEl11 = document.createElement('li');
+
+                  const aEl13 = document.createElement('a');
+                  aEl13.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                  aEl13.setAttribute('title', 'Pay Premiuim');
+                  aEl13.textContent = 'Pay Premiuim';
+                liEl11.append(aEl13);
+              ulEl2.append(liEl11);
+            divEl19.append(ulEl2);
+          divEl18.append(divEl19);
+        divEl17.append(divEl18);
+      divEl16.append(divEl17);
+    divEl15.append(divEl16);
+  navEl.append(divEl15);
+
+    const divEl20 = document.createElement('div');
+    divEl20.setAttribute('class', 'section ipru-nav-3-container');
+    divEl20.setAttribute('data-section-status', 'loaded');
+    divEl20.setAttribute('style', '');
+
+      const divEl21 = document.createElement('div');
+      divEl21.setAttribute('class', 'ipru-nav-3-wrapper');
+
+        const divEl22 = document.createElement('div');
+        divEl22.setAttribute('class', 'ipru-nav-3 block');
+        divEl22.setAttribute('data-block-name', 'ipru-nav-3');
+        divEl22.setAttribute('data-block-status', 'loaded');
+
+          const divEl23 = document.createElement('div');
+          divEl23.setAttribute('class', 'ipru-header-notif');
+
+            const divEl24 = document.createElement('div');
+            divEl24.setAttribute('class', 'ipru-nav-notif-text');
+
+              const pEl3 = document.createElement('p');
+
+                const aEl14 = document.createElement('a');
+                aEl14.setAttribute('href', 'https://docs.google.com/document/d/1YdEj1i7l9eUb8EckoxlQjA51C6OmdMy2m8yZ4gw4qLY/edit#');
+                aEl14.setAttribute('title', 'Click here');
+                aEl14.textContent = 'Click here';
+              pEl3.append(aEl14);
+            divEl24.append(pEl3);
+          divEl23.append(divEl24);
+        divEl22.append(divEl23);
+      divEl21.append(divEl22);
+    divEl20.append(divEl21);
+  navEl.append(divEl20);
+  container.append(navEl);
+
+
   block.textContent = '';
-  const nav = document.createElement('nav');
-  nav.id = 'nav';
-  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
-
-  const classes = ['brand', 'sections', 'tools'];
-  classes.forEach((c, i) => {
-    const section = nav.children[i];
-    if (section) section.classList.add(`nav-${c}`);
-  });
-
-  const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
-  if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
-  }
-
-  const navSections = nav.querySelector('.nav-sections');
-  if (navSections) {
-    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
-        if (isDesktop.matches) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        }
-      });
-    });
-  }
-
-  // hamburger for mobile
-  const hamburger = document.createElement('div');
-  hamburger.classList.add('nav-hamburger');
-  hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
-      <span class="nav-hamburger-icon"></span>
-    </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
-  nav.prepend(hamburger);
-  nav.setAttribute('aria-expanded', 'false');
-  // prevent mobile nav behavior on window resize
-  toggleMenu(nav, navSections, isDesktop.matches);
-  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
-
-  const navWrapper = document.createElement('div');
-  navWrapper.className = 'nav-wrapper';
-  navWrapper.append(nav);
-  block.append(navWrapper);
+  block.append(container);
 }

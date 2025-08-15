@@ -33,6 +33,10 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Ipru Hero",
+              "value": "ipru-hero"
             }
           ]
         }
@@ -51,7 +55,9 @@
         "cards",
         "columns",
         "fragment",
-        "ipru-heros"
+        "ipru-hero",
+        "ipru-wbo",
+        "ipru-insurance-plans"
       ]
     }
   ]

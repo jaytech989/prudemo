@@ -18,3 +18,150 @@ footer .footer p {
     padding: 40px 32px 24px;
   }
 }
+
+/* stylelint-disable no-descending-specificity */
+
+.ipru-footer-container {
+  background-color: #97291e;
+  color: #fff;
+ padding: 40px 0 60px;
+ display: flex;
+  justify-content: center;
+}
+
+.ipru-footer-wrapper{
+width: 1170px!important;
+padding: 0 15px;
+}
+
+.footer-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section > div{
+  width: 25%;
+}
+
+.col-heading{
+      font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.col-heading a{
+  color: #fff;
+  text-decoration: #fff;
+}
+
+.col-list-lev-1{
+  display: inline-block;
+    font-weight: 600;
+    padding-left: 0;
+    width: 100%;
+    margin-top: 0;
+}
+
+.col-list-lev-1>li{
+  list-style-type: none;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.col-list-lev-1>li a{
+  color: #fff;
+    text-decoration: none;
+}
+
+.col-list-lev-2{
+  padding-left: 10px;
+}
+
+.col-list-lev-2>li{
+list-style-type: none;
+font-size: 13px;
+}
+
+.col-list-lev-2>li a{
+  color: #fff;
+    text-decoration: none;
+}
+
+.col-2> .col-list-lev-1:nth-child(5)>li{
+  margin-bottom: 0;
+}
+
+.col-3> .col-list-lev-1>li{
+  margin-bottom: 0;
+}
+
+.col-4> .col-list-lev-1:nth-child(6)>li{
+  margin-bottom: 0;
+
+}
+
+.footer-section> .footer-info{
+  width: 100%;
+  font-weight: 600;
+    font-size: 11px;
+}
+
+.footer-section:nth-child(3){
+  border: 1px solid #fff;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer-section>.footer-warn-text{
+display: inline-block;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 18px;
+    margin-right: 5%;
+    vertical-align: middle;
+    width: 70%;
+}
+
+.footer-section>.footer-warn-text h3{
+ font-weight: 600;
+    font-size: 11px;
+    line-height: 18px;
+    margin-right: 5%;
+}
+
+.footer-section>.footer-warn-button{
+      background-color: #e77817;
+    border: 1px solid transparent;
+    color: #fff;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 11px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    vertical-align: middle;
+    width: 24%;
+}
+
+.footer-warn-button a{
+color: #fff;
+font-size: 11px;
+text-decoration: none;
+}
+
+.footer-section>.footer-warn-button:hover{
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.footer-warn-button a:hover{
+color: #fff;
+background: transparent;
+text-decoration: none;
+}

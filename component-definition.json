@@ -156,6 +156,97 @@
               }
             }
           }
+        },
+        {
+          "title": "Ipru Hero",
+          "id": "ipru-hero",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Ipru Hero",
+                  "filter": "ipru-hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Ipru Hero Child",
+          "id": "ipru-hero-child",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Ipru Hero Child",
+                  "model": "ipru-hero-child"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Ipru Insurance Plans",
+          "id": "ipru-insurance-plans",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Ipru Insurance Plans",
+                  "filter": "ipru-insurance-plans"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Ipru Insurance Plans Child",
+          "id": "ipru-insurance-plans-child",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Ipru Insurance Plans Child",
+                  "model": "ipru-insurance-plans-child"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Ipru Wbo",
+          "id": "ipruwbo",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Ipru Wbo",
+                  "filter": "ipruwbo",
+                  "model": "ipruwbo"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Ipru Wbo Child",
+          "id": "ipru-wbo-child",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Ipru Wbo Child",
+                  "model": "ipru-wbo-child"
+                }
+              }
+            }
+          }
         }
       ]
     }

@@ -1,4 +1,5 @@
 export default function decorate(block) {
+
   const parent = block.closest('.ipru-hero'); // Find the parent with the ipru-hero class
 
   // Create the 'prev' button
@@ -43,6 +44,7 @@ export default function decorate(block) {
       row.classList.add('active');
     }
     [...row.children].forEach((div, d) => {
+      
       if (d === 0) {
         div.classList.add('slide-body');
         const img = div.querySelector('img');
@@ -60,12 +62,12 @@ export default function decorate(block) {
         phead.classList.add('hero-cta');
       }
 
-      const table = div.querySelector('table');
-      if (table) {
-        [...table.rows].forEach((tr, i) => {
-          tr.classList.add('tab-row-'.concat(i + 1));
-        });
-      }
+      // const table = div.querySelector('table');
+      // if (table) {
+      //   [...table.rows].forEach((tr, i) => {
+      //     tr.classList.add('tab-row-'.concat(i + 1));
+      //   });
+      // }
     });
   });
 }

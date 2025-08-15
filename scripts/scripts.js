@@ -134,9 +134,18 @@ async function loadLazy(doc) {
  */
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
+  // window.setTimeout(() => import('./libs/insure-assure-ext.js'), 1000);
+  window.setTimeout(() => import('./libs/ipru-hero-ext.js'), 1000);
+  // window.setTimeout(() => import('./libs/ipru-sm-carousel-ext.js'), 1000);
+  // window.setTimeout(() => import('./libs/ipru-features-ext.js'), 1000);
+  // window.setTimeout(() => import('./libs/ipru-testimonials-ext.js'), 1000);
+  // window.setTimeout(() => import('./libs/replace-img.js'), 1000);
+  // window.setTimeout(() => import('./libs/ipru-ot-calc-ext.js'), 1000);
+  // window.setTimeout(() => import('./libs/ipru-test-monials-ext.js'), 1000);
   window.setTimeout(() => import('./delayed.js'), 3000);
   // load anything that can be postponed to the latest here
 }
+
 
 async function loadPage() {
   await loadEager(document);

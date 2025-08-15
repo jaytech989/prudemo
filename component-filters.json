@@ -16,7 +16,9 @@
       "cards",
       "columns",
       "fragment",
-      "ipru-heros"
+      "ipru-hero",
+      "ipru-wbo",
+      "ipru-insurance-plans"
     ]
   },
   {
@@ -38,6 +40,24 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "ipru-hero",
+    "components": [
+      "ipru-hero-child"
+    ]
+  },
+  {
+    "id": "ipru-insurance-plans",
+    "components": [
+      "ipru-insurance-plans-child"
+    ]
+  },
+  {
+    "id": "ipruwbo",
+    "components": [
+      "ipru-wbo-child"
     ]
   }
 ]

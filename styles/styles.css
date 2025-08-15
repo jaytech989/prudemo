@@ -10,17 +10,17 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
+ :root {
   /* colors */
   --background-color: white;
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
   --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --link-hover-color: #e26c41;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
+  --body-font-family: mulish, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
@@ -93,8 +93,8 @@ footer .footer {
   visibility: hidden;
 }
 
-header .header[data-block-status="loaded"],
-footer .footer[data-block-status="loaded"] {
+header .header[data-block-status='loaded'],
+footer .footer[data-block-status='loaded'] {
   visibility: visible;
 }
 
@@ -112,14 +112,31 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
 
-p,
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
+
+/* p,
 dl,
 ol,
 ul,
@@ -127,7 +144,7 @@ pre,
 blockquote {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
-}
+} */
 
 code,
 pre {
@@ -154,19 +171,21 @@ button {
 }
 
 /* links */
-a:any-link {
+
+/* a:any-link {
   color: var(--link-color);
   text-decoration: none;
-  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 a:hover {
   color: var(--link-hover-color);
   text-decoration: underline;
-}
+} */
 
 /* buttons */
-a.button:any-link,
+
+/* a.button:any-link,
 button {
   box-sizing: border-box;
   display: inline-block;
@@ -187,7 +206,7 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+} */
 
 a.button:hover,
 a.button:focus,
@@ -212,8 +231,9 @@ button.secondary {
 
 main img {
   max-width: 100%;
-  width: auto;
-  height: auto;
+
+  /* width: auto;
+  height: auto; */
 }
 
 .icon {
@@ -229,11 +249,11 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1150px;
   margin: auto;
   padding: 0 24px;
 }
@@ -254,4 +274,8 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+.owl-stage {
+  display: flex;
 }
