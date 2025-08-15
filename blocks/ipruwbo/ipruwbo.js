@@ -1,4 +1,6 @@
 export default function decorate(block) {
+
+debugger
   [...block.children].forEach((row, r) => {
     if (r === 0) {
       row.classList.add('ipru-wbo-heading');

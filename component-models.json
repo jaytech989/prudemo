@@ -140,6 +140,10 @@
           {
             "name": "Ipru Hero",
             "value": "ipru-hero"
+          },
+          {
+            "name": "Ipru-wbo-container",
+            "value": "ipru-wbo-container"
           }
         ]
       }

@@ -1,72 +1,72 @@
 /* stylelint-disable no-descending-specificity */
 
 .ipru-wbo-container{
-        background: #faf7f7;
-    padding: 2rem 5% 45px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: -40px;
+    background: #faf7f7;
+padding: 2rem 5% 45px;
+display: flex;
+justify-content: center;
+margin-bottom: -40px;
 }
 
 .ipru-wbo-wrapper{
-   width: 1170px;
-    margin: 0 auto;
-    padding: 0 30px 0 14px !important;
+width: 1170px;
+margin: 0 auto;
+padding: 0 30px 0 14px !important;
 }
 
 .ipru-wbo-heading p{
-        font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 0 0 0 1rem;
-    color: #444;
-    margin: 0;
-    font-family: Mulish, sans-serif;
+    font-size: 18px;
+font-weight: 600;
+letter-spacing: 1px;
+padding: 0 0 0 1rem;
+color: #444;
+margin: 0;
+font-family: Mulish, sans-serif;
 }
 
 .ipru-wbo-heading h2{
-        font-size: 26px;
-    font-weight: 800;
-    line-height: 30px;
-    width: 310px;
-    padding: 0 0 1rem 1rem;
-    color: #444;
-    margin: 0;
-    font-family: Mulish, sans-serif;
+    font-size: 26px;
+font-weight: 800;
+line-height: 30px;
+width: 310px;
+padding: 0 0 1rem 1rem;
+color: #444;
+margin: 0;
+font-family: Mulish, sans-serif;
 }
 
 .ipru-wbo-cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 0.5rem;
+display: flex;
+flex-wrap: wrap;
+gap: 2%;
+justify-content: space-between;
+align-items: flex-start;
+margin-top: 0.5rem;
 }
 
 .wbo-cards{
-    width: 18%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    row-gap: 10px;
+width: 18%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+row-gap: 10px;
 }
 
 .wbo-cards p{
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    line-height: 20px;
-    font-family: Mulish, sans-serif;
-    margin: 0;
+font-size: 16px;
+font-weight: 700;
+letter-spacing: 1px;
+line-height: 20px;
+font-family: Mulish, sans-serif;
+margin: 0;
 }
 
 .wbo-cards img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 130px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: auto;
+height: 130px;
 }
