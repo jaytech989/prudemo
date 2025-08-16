@@ -1,112 +1,223 @@
-.ipru-ot-calc-container {
-  background: #eeefe2;
+.ipru-insure-assure-container {
   width: 100%;
-}
-
-.ipru-ot-calc {
-  width: 100%;
-  margin: 0;
+  padding: 35px 0 50px;
+  background: #e8eac5;
   color: #444;
-  max-width: 1150px;
-  padding: 2rem 30px 0 14px;
+  position: relative;
 }
 
-.ot-cal-heading > div > p {
-  line-height: 22px;
+.ipru-insure-assure-wrapper {
+  margin: 0 auto;
+  padding: 0 30px 0 14px !important;
+  max-width: 1106px !important;
+}
+
+.para-1 {
   font-size: 18px;
-  font-weight: 500;
+  padding-bottom: 0;
+  line-height: 22px;
+  font-weight: 600;
+  color: #444;
   margin: 0;
   font-family: Mulish, sans-serif;
 }
 
-.ot-cal-heading > div > h2 {
+.insure-assure-heading h2 {
+  font-size: 24px;
+  padding-bottom: 10px !important;
   line-height: 30px;
-  font-size: 26px;
-  font-weight: 700;
-  width: 325px;
+  font-weight: 800;
+  width: 286px;
+  color: #444;
   margin: 0;
   font-family: Mulish, sans-serif;
 }
 
-.ot-cal-body {
+.para-2 {
+  line-height: 27px;
+  font-size: 18px !important;
+  font-weight: 400;
+  margin-top: 10px !important;
+  color: #444;
+  text-align: unset !important;
+  margin-bottom: 0;
+  font-family: Mulish, sans-serif;
+}
+
+.para-3 {
+  font-size: 14px;
+  cursor: pointer;
+  color: #444;
+  font-weight: 800;
+  margin: 0;
+  font-family: Mulish, sans-serif;
+}
+
+.para-3 a {
+  text-decoration: none;
+  color: #444;
+  font-family: Mulish, sans-serif;
+}
+
+/* < ------ insure-assure-body ------ > */
+
+.insure-assure-body {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  padding: 10px 25px;
+  margin: 15px 0 10px;
+  border-radius: 30px;
+}
+
+.left-card p:first-child {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #444;
+  padding-top: 16px;
+  margin: 0;
+  font-family: Mulish, sans-serif;
+}
+
+.grid-table {
+  margin-top: 12px;
+  padding-top: 15px;
+  width: 100%;
+  border-collapse: separate; /* Ensure the table cells aren't collapsed */
+  border-spacing: 10px;
+}
+
+.ia-card {
+  width: 187px;
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 24px 10px 15px;
+  height: 96px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Mulish, sans-serif;
+}
+
+.ia-card p:first-child {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.ia-card p:last-child {
+  margin: 10px 0;
+}
+
+.ia-card.active {
+  border: 1px solid #f15a22;
+  background: #fcd9bc;
+}
+
+.ia-card img {
+  margin: 0 !important;
+  display: block;
+  width: 24px;
+}
+
+/* < ------ Right Side Carousel ------ > */
+
+.right-card {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 61px 0 auto;
+}
+
+.right-card-table {
+  padding: 22px 24px 0;
+  width: auto;
+  height: 423px;
+}
+
+.carousel-slide {
+  display: none;
+  text-align: left;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  background-color: #f9f9f9;
+}
+
+.carousel-slide picture {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.carousel-slide p:first-child {
+  margin: 0;
+}
+
+.carousel-slide h2 {
+  margin: 20px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #444;
+  font-family: Mulish, sans-serif;
+}
+
+.carousel-slide p:last-child {
+  font-size: 16px;
+  margin-top: 5;
+  font-family: Mulish, sans-serif;
+  height: 300px !important;
+  overflow-y: auto;
+  position: relative;
+  scrollbar-width: thin;
+}
+
+.carousel-slide.active {
+  display: table-cell;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: center;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  width: 416.94px;
+  margin-top: -14px;
+  padding-bottom: 20px;
+}
+
+.carousel-controls picture {
+  top: unset !important;
+  bottom: -38px !important;
+  background: #fbcdbd;
+  border-radius: 50%;
+  right: 26% !important;
+  padding: 4px;
+  height: 27px;
+  width: 27px;
+  cursor: pointer;
+}
+
+.carousel-controls img {
+  width: auto;
+  height: 10px;
+}
+
+.pagination-dots {
   display: flex;
   justify-content: space-between;
-}
-
-.tool-table {
-  width: 45%;
-  margin-top: 20px;
-}
-
-.tool-table table {
-  border-spacing: 15px;
-}
-
-.tool-table td {
-  width: 150px;
-  height: 80px !important;
-  text-align: center;
-}
-
-.tool-table td p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 500;
-  color: #444;
-  margin-top: 0;
-  line-height: 17px;
-  width: 90px;
-  font-family: Mulish, sans-serif;
-}
-
-.tool-table td picture {
-  height: 70px;
-  width: 70px;
-  background: #fff;
-  border-radius: 50%;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s ease-in;
-}
-
-.tool-table tr:nth-child(1) td:nth-child(1) picture {
-  background: #e06336;
-}
-
-.tool-table tr:nth-child(1) td:nth-child(1) img {
-  filter: brightness(0) invert(1);
-}
-
-.tool-cta p:last-child a {
-  background-color: #e06336;
-  border-radius: 38px;
-  color: #fff;
-  width: 310px;
-  text-decoration: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 52px;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: Mulish, sans-serif;
-}
-
-.tool-cta p:last-child a:hover {
-  background: #e06336;
-}
-
-.tool-cta p:last-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.insure-click {
-  cursor: pointer;
+  position: absolute;
+  bottom: 104px;
 }
