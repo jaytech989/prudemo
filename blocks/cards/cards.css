@@ -1,8 +1,18 @@
 /* stylelint-disable no-descending-specificity */
 
+.section.ipru-hero.cards-container{
+  /* margin-bottom: 140px; */
+  height: 400px;
+}
+
+.ipru-hero .cards-wrapper{
+position: relative;
+}
+
 .ipru-hero .cards
 {
   display: flex;
+  gap: 30px;
 }
 .indicators{
   display: none !important;
@@ -16,7 +26,7 @@
 }
 
 .ipru-hero {
-  display: flex;
+  /* display: flex; */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -29,12 +39,13 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .prev,
 .next {
   position: absolute;
-  top: 50%;
+    top: 48%;
   transform: translateY(-50%);
   background-color: #fbcdbd;
   color: #f36523;
@@ -61,11 +72,11 @@
 }
 
 .prev {
-  left: 0;
+   left: 1%;
 }
 
 .next {
-  right: 0;
+  right: 1%;
 }
 
 .indicators {
@@ -95,10 +106,10 @@
   height: 278px;
   background-size: cover;
   position: relative;
-  margin: 20px 30px;
+  /* margin: 20px 30px; */
   background-repeat: no-repeat;
   border-radius: 24px;
-  width: 90%;
+  /* width: 90%; */
 }
 
 .hero-cta {
@@ -111,8 +122,8 @@
   background-color: white;
   gap: 10px;
   color: #8e2727;
-  right: 26px;
-  top: 32%;
+  right: 10px;
+  top: 45%;
   cursor: pointer;
   position: absolute;
   transition: 0.3s ease;

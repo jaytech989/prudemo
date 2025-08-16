@@ -1,5 +1,4 @@
 export default function decorate(block) {
-  debugger
 
   const parent = block.closest('.ipru-hero'); // Find the parent with the ipru-hero class
 

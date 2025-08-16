@@ -1,6 +1,4 @@
 export default function decorate(block) {
-  debugger
-
   const parent = block.closest('.ipru-hero'); // Find the parent with the ipru-hero class
 
   // Create the 'prev' button
@@ -28,14 +26,10 @@ export default function decorate(block) {
     indicatorDiv.appendChild(span);
   }
 
-  // Add 'prev' button before the ipru-hero
-  parent.parentNode.insertBefore(prevButton, parent);
-
-  // Add 'next' button after the ipru-hero
-  parent.parentNode.insertBefore(nextButton, parent.nextSibling);
-
-  // Add 'indicator' div after the next button
-  parent.parentNode.insertBefore(indicatorDiv, nextButton.nextSibling);
+  // ✅ Append inside .ipru-hero (after all children)
+  parent.appendChild(prevButton);
+  parent.appendChild(nextButton);
+  parent.appendChild(indicatorDiv);
 
   // Process slides as before
   [...block.children].forEach((row, r) => {
@@ -45,7 +39,6 @@ export default function decorate(block) {
       row.classList.add('active');
     }
     [...row.children].forEach((div, d) => {
-      
       if (d === 0) {
         div.classList.add('slide-body');
         const img = div.querySelector('img');
@@ -62,13 +55,6 @@ export default function decorate(block) {
       if (phead) {
         phead.classList.add('hero-cta');
       }
-
-      // const table = div.querySelector('table');
-      // if (table) {
-      //   [...table.rows].forEach((tr, i) => {
-      //     tr.classList.add('tab-row-'.concat(i + 1));
-      //   });
-      // }
     });
   });
 }
