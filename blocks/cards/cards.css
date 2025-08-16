@@ -1,5 +1,12 @@
 /* stylelint-disable no-descending-specificity */
 
+.ipru-hero .cards
+{
+  display: flex;
+}
+.indicators{
+  display: none !important;
+}
 .ipru-hero-wrapper {
   position: relative;
   max-width: 1250px !important;

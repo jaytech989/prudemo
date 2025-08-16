@@ -1,4 +1,5 @@
 export default function decorate(block) {
+  debugger
 
   const parent = block.closest('.ipru-hero'); // Find the parent with the ipru-hero class
 
@@ -49,8 +50,8 @@ export default function decorate(block) {
         div.classList.add('slide-body');
         const img = div.querySelector('img');
         if (img) {
-          div.style.backgroundImage = `url(${img.src})`;
-          img.remove();
+          // div.style.backgroundImage = `url(${img.src})`;
+          // img.remove();
         }
         const pTag = div.querySelector(':scope > p:first-child');
         if (pTag) {
