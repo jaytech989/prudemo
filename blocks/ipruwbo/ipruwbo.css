@@ -18,19 +18,25 @@
     padding: 0 30px 0 14px !important;
 }
 
-.default-content-wrapper img{
+.default-content-wrapper img {
     margin-top: -28px;
 }
+
+.ipruwbo-container.default-content-wrapper {
+    margin: 0 !important;
+}
+
 
 .ipruwbo-wrapper {
     margin: 0 !important;
 }
 
-.ipruwbo{
+.ipruwbo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 /* 
 .ipruwbo div{
  margin-right: 20px;
