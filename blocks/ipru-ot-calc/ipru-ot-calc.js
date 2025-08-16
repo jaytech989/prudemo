@@ -52,25 +52,25 @@ export default function decorate(block) {
 
                         const sourceEl = document.createElement('source');
                         sourceEl.setAttribute('type', 'image/webp');
-                        sourceEl.setAttribute('srcset', './media_1f6c3b02b04c809129cb0b1efdfe79a002a515dda.png?width=2000&format=webply&optimize=medium');
+                        sourceEl.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1f6c3b02b04c809129cb0b1efdfe79a002a515dda.png?width=2000&format=webply&optimize=medium');
                         sourceEl.setAttribute('media', '(min-width: 600px)');
                       pictureEl.append(sourceEl);
 
                         const sourceEl2 = document.createElement('source');
                         sourceEl2.setAttribute('type', 'image/webp');
-                        sourceEl2.setAttribute('srcset', './media_1f6c3b02b04c809129cb0b1efdfe79a002a515dda.png?width=750&format=webply&optimize=medium');
+                        sourceEl2.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1f6c3b02b04c809129cb0b1efdfe79a002a515dda.png?width=750&format=webply&optimize=medium');
                       pictureEl.append(sourceEl2);
 
                         const sourceEl3 = document.createElement('source');
                         sourceEl3.setAttribute('type', 'image/png');
-                        sourceEl3.setAttribute('srcset', './media_1f6c3b02b04c809129cb0b1efdfe79a002a515dda.png?width=2000&format=png&optimize=medium');
+                        sourceEl3.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1f6c3b02b04c809129cb0b1efdfe79a002a515dda.png?width=2000&format=png&optimize=medium');
                         sourceEl3.setAttribute('media', '(min-width: 600px)');
                       pictureEl.append(sourceEl3);
 
                         const imgEl = document.createElement('img');
                         imgEl.setAttribute('loading', 'lazy');
                         imgEl.setAttribute('alt', '');
-                        imgEl.setAttribute('src', './media_1f6c3b02b04c809129cb0b1efdfe79a002a515dda.png?width=750&format=png&optimize=medium');
+                        imgEl.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_1f6c3b02b04c809129cb0b1efdfe79a002a515dda.png?width=750&format=png&optimize=medium');
                         imgEl.setAttribute('width', '42');
                         imgEl.setAttribute('height', '42');
                       pictureEl.append(imgEl);
@@ -91,25 +91,25 @@ export default function decorate(block) {
 
                         const sourceEl4 = document.createElement('source');
                         sourceEl4.setAttribute('type', 'image/webp');
-                        sourceEl4.setAttribute('srcset', './media_1d2f9adf48fb46930d77c1c7b7dd4e36f99e6061a.png?width=2000&format=webply&optimize=medium');
+                        sourceEl4.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1d2f9adf48fb46930d77c1c7b7dd4e36f99e6061a.png?width=2000&format=webply&optimize=medium');
                         sourceEl4.setAttribute('media', '(min-width: 600px)');
                       pictureEl2.append(sourceEl4);
 
                         const sourceEl5 = document.createElement('source');
                         sourceEl5.setAttribute('type', 'image/webp');
-                        sourceEl5.setAttribute('srcset', './media_1d2f9adf48fb46930d77c1c7b7dd4e36f99e6061a.png?width=750&format=webply&optimize=medium');
+                        sourceEl5.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1d2f9adf48fb46930d77c1c7b7dd4e36f99e6061a.png?width=750&format=webply&optimize=medium');
                       pictureEl2.append(sourceEl5);
 
                         const sourceEl6 = document.createElement('source');
                         sourceEl6.setAttribute('type', 'image/png');
-                        sourceEl6.setAttribute('srcset', './media_1d2f9adf48fb46930d77c1c7b7dd4e36f99e6061a.png?width=2000&format=png&optimize=medium');
+                        sourceEl6.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1d2f9adf48fb46930d77c1c7b7dd4e36f99e6061a.png?width=2000&format=png&optimize=medium');
                         sourceEl6.setAttribute('media', '(min-width: 600px)');
                       pictureEl2.append(sourceEl6);
 
                         const imgEl2 = document.createElement('img');
                         imgEl2.setAttribute('loading', 'lazy');
                         imgEl2.setAttribute('alt', '');
-                        imgEl2.setAttribute('src', './media_1d2f9adf48fb46930d77c1c7b7dd4e36f99e6061a.png?width=750&format=png&optimize=medium');
+                        imgEl2.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_1d2f9adf48fb46930d77c1c7b7dd4e36f99e6061a.png?width=750&format=png&optimize=medium');
                         imgEl2.setAttribute('width', '42');
                         imgEl2.setAttribute('height', '42');
                       pictureEl2.append(imgEl2);
@@ -130,25 +130,25 @@ export default function decorate(block) {
 
                         const sourceEl7 = document.createElement('source');
                         sourceEl7.setAttribute('type', 'image/webp');
-                        sourceEl7.setAttribute('srcset', './media_17da663613570829f92bcb5460c1f66aac94798a4.png?width=2000&format=webply&optimize=medium');
+                        sourceEl7.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_17da663613570829f92bcb5460c1f66aac94798a4.png?width=2000&format=webply&optimize=medium');
                         sourceEl7.setAttribute('media', '(min-width: 600px)');
                       pictureEl3.append(sourceEl7);
 
                         const sourceEl8 = document.createElement('source');
                         sourceEl8.setAttribute('type', 'image/webp');
-                        sourceEl8.setAttribute('srcset', './media_17da663613570829f92bcb5460c1f66aac94798a4.png?width=750&format=webply&optimize=medium');
+                        sourceEl8.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_17da663613570829f92bcb5460c1f66aac94798a4.png?width=750&format=webply&optimize=medium');
                       pictureEl3.append(sourceEl8);
 
                         const sourceEl9 = document.createElement('source');
                         sourceEl9.setAttribute('type', 'image/png');
-                        sourceEl9.setAttribute('srcset', './media_17da663613570829f92bcb5460c1f66aac94798a4.png?width=2000&format=png&optimize=medium');
+                        sourceEl9.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_17da663613570829f92bcb5460c1f66aac94798a4.png?width=2000&format=png&optimize=medium');
                         sourceEl9.setAttribute('media', '(min-width: 600px)');
                       pictureEl3.append(sourceEl9);
 
                         const imgEl3 = document.createElement('img');
                         imgEl3.setAttribute('loading', 'lazy');
                         imgEl3.setAttribute('alt', '');
-                        imgEl3.setAttribute('src', './media_17da663613570829f92bcb5460c1f66aac94798a4.png?width=750&format=png&optimize=medium');
+                        imgEl3.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_17c02386fa86bbeae1ff302ae15333a2ceaf4a70f.png?width=2000&format=webply&optimize=medium;');
                         imgEl3.setAttribute('width', '46');
                         imgEl3.setAttribute('height', '46');
                       pictureEl3.append(imgEl3);
@@ -172,25 +172,25 @@ export default function decorate(block) {
 
                         const sourceEl10 = document.createElement('source');
                         sourceEl10.setAttribute('type', 'image/webp');
-                        sourceEl10.setAttribute('srcset', './media_1aa1b0d20ac84c2ef3c88bac638b3cfaf46e0f08e.png?width=2000&format=webply&optimize=medium');
+                        sourceEl10.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1aa1b0d20ac84c2ef3c88bac638b3cfaf46e0f08e.png?width=2000&format=webply&optimize=medium');
                         sourceEl10.setAttribute('media', '(min-width: 600px)');
                       pictureEl4.append(sourceEl10);
 
                         const sourceEl11 = document.createElement('source');
                         sourceEl11.setAttribute('type', 'image/webp');
-                        sourceEl11.setAttribute('srcset', './media_1aa1b0d20ac84c2ef3c88bac638b3cfaf46e0f08e.png?width=750&format=webply&optimize=medium');
+                        sourceEl11.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1aa1b0d20ac84c2ef3c88bac638b3cfaf46e0f08e.png?width=750&format=webply&optimize=medium');
                       pictureEl4.append(sourceEl11);
 
                         const sourceEl12 = document.createElement('source');
                         sourceEl12.setAttribute('type', 'image/png');
-                        sourceEl12.setAttribute('srcset', './media_1aa1b0d20ac84c2ef3c88bac638b3cfaf46e0f08e.png?width=2000&format=png&optimize=medium');
+                        sourceEl12.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1aa1b0d20ac84c2ef3c88bac638b3cfaf46e0f08e.png?width=2000&format=png&optimize=medium');
                         sourceEl12.setAttribute('media', '(min-width: 600px)');
                       pictureEl4.append(sourceEl12);
 
                         const imgEl4 = document.createElement('img');
                         imgEl4.setAttribute('loading', 'lazy');
                         imgEl4.setAttribute('alt', '');
-                        imgEl4.setAttribute('src', './media_1aa1b0d20ac84c2ef3c88bac638b3cfaf46e0f08e.png?width=750&format=png&optimize=medium');
+                        imgEl4.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_1aa1b0d20ac84c2ef3c88bac638b3cfaf46e0f08e.png?width=750&format=png&optimize=medium');
                         imgEl4.setAttribute('width', '48');
                         imgEl4.setAttribute('height', '48');
                       pictureEl4.append(imgEl4);
@@ -211,25 +211,25 @@ export default function decorate(block) {
 
                         const sourceEl13 = document.createElement('source');
                         sourceEl13.setAttribute('type', 'image/webp');
-                        sourceEl13.setAttribute('srcset', './media_1b47ad6b6f2dd6cf8829d9d4b1025166c49af8755.png?width=2000&format=webply&optimize=medium');
+                        sourceEl13.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1b47ad6b6f2dd6cf8829d9d4b1025166c49af8755.png?width=2000&format=webply&optimize=medium');
                         sourceEl13.setAttribute('media', '(min-width: 600px)');
                       pictureEl5.append(sourceEl13);
 
                         const sourceEl14 = document.createElement('source');
                         sourceEl14.setAttribute('type', 'image/webp');
-                        sourceEl14.setAttribute('srcset', './media_1b47ad6b6f2dd6cf8829d9d4b1025166c49af8755.png?width=750&format=webply&optimize=medium');
+                        sourceEl14.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1b47ad6b6f2dd6cf8829d9d4b1025166c49af8755.png?width=750&format=webply&optimize=medium');
                       pictureEl5.append(sourceEl14);
 
                         const sourceEl15 = document.createElement('source');
                         sourceEl15.setAttribute('type', 'image/png');
-                        sourceEl15.setAttribute('srcset', './media_1b47ad6b6f2dd6cf8829d9d4b1025166c49af8755.png?width=2000&format=png&optimize=medium');
+                        sourceEl15.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1b47ad6b6f2dd6cf8829d9d4b1025166c49af8755.png?width=2000&format=png&optimize=medium');
                         sourceEl15.setAttribute('media', '(min-width: 600px)');
                       pictureEl5.append(sourceEl15);
 
                         const imgEl5 = document.createElement('img');
                         imgEl5.setAttribute('loading', 'lazy');
                         imgEl5.setAttribute('alt', '');
-                        imgEl5.setAttribute('src', './media_1b47ad6b6f2dd6cf8829d9d4b1025166c49af8755.png?width=750&format=png&optimize=medium');
+                        imgEl5.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_1b47ad6b6f2dd6cf8829d9d4b1025166c49af8755.png?width=750&format=png&optimize=medium');
                         imgEl5.setAttribute('width', '40');
                         imgEl5.setAttribute('height', '40');
                       pictureEl5.append(imgEl5);
@@ -250,25 +250,25 @@ export default function decorate(block) {
 
                         const sourceEl16 = document.createElement('source');
                         sourceEl16.setAttribute('type', 'image/webp');
-                        sourceEl16.setAttribute('srcset', './media_1ce411a1e27dd344a0ab4e87332594e17ee06a6c1.png?width=2000&format=webply&optimize=medium');
+                        sourceEl16.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1ce411a1e27dd344a0ab4e87332594e17ee06a6c1.png?width=2000&format=webply&optimize=medium');
                         sourceEl16.setAttribute('media', '(min-width: 600px)');
                       pictureEl6.append(sourceEl16);
 
                         const sourceEl17 = document.createElement('source');
                         sourceEl17.setAttribute('type', 'image/webp');
-                        sourceEl17.setAttribute('srcset', './media_1ce411a1e27dd344a0ab4e87332594e17ee06a6c1.png?width=750&format=webply&optimize=medium');
+                        sourceEl17.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1ce411a1e27dd344a0ab4e87332594e17ee06a6c1.png?width=750&format=webply&optimize=medium');
                       pictureEl6.append(sourceEl17);
 
                         const sourceEl18 = document.createElement('source');
                         sourceEl18.setAttribute('type', 'image/png');
-                        sourceEl18.setAttribute('srcset', './media_1ce411a1e27dd344a0ab4e87332594e17ee06a6c1.png?width=2000&format=png&optimize=medium');
+                        sourceEl18.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1ce411a1e27dd344a0ab4e87332594e17ee06a6c1.png?width=2000&format=png&optimize=medium');
                         sourceEl18.setAttribute('media', '(min-width: 600px)');
                       pictureEl6.append(sourceEl18);
 
                         const imgEl6 = document.createElement('img');
                         imgEl6.setAttribute('loading', 'lazy');
                         imgEl6.setAttribute('alt', '');
-                        imgEl6.setAttribute('src', './media_1ce411a1e27dd344a0ab4e87332594e17ee06a6c1.png?width=750&format=png&optimize=medium');
+                        imgEl6.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_1ce411a1e27dd344a0ab4e87332594e17ee06a6c1.png?width=750&format=png&optimize=medium');
                         imgEl6.setAttribute('width', '48');
                         imgEl6.setAttribute('height', '48');
                       pictureEl6.append(imgEl6);
@@ -292,25 +292,25 @@ export default function decorate(block) {
 
                         const sourceEl19 = document.createElement('source');
                         sourceEl19.setAttribute('type', 'image/webp');
-                        sourceEl19.setAttribute('srcset', './media_1fbe710066d25ab996b841e7ad68b1df88a1c96e3.png?width=2000&format=webply&optimize=medium');
+                        sourceEl19.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1fbe710066d25ab996b841e7ad68b1df88a1c96e3.png?width=2000&format=webply&optimize=medium');
                         sourceEl19.setAttribute('media', '(min-width: 600px)');
                       pictureEl7.append(sourceEl19);
 
                         const sourceEl20 = document.createElement('source');
                         sourceEl20.setAttribute('type', 'image/webp');
-                        sourceEl20.setAttribute('srcset', './media_1fbe710066d25ab996b841e7ad68b1df88a1c96e3.png?width=750&format=webply&optimize=medium');
+                        sourceEl20.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1fbe710066d25ab996b841e7ad68b1df88a1c96e3.png?width=750&format=webply&optimize=medium');
                       pictureEl7.append(sourceEl20);
 
                         const sourceEl21 = document.createElement('source');
                         sourceEl21.setAttribute('type', 'image/png');
-                        sourceEl21.setAttribute('srcset', './media_1fbe710066d25ab996b841e7ad68b1df88a1c96e3.png?width=2000&format=png&optimize=medium');
+                        sourceEl21.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1fbe710066d25ab996b841e7ad68b1df88a1c96e3.png?width=2000&format=png&optimize=medium');
                         sourceEl21.setAttribute('media', '(min-width: 600px)');
                       pictureEl7.append(sourceEl21);
 
                         const imgEl7 = document.createElement('img');
                         imgEl7.setAttribute('loading', 'lazy');
                         imgEl7.setAttribute('alt', '');
-                        imgEl7.setAttribute('src', './media_1fbe710066d25ab996b841e7ad68b1df88a1c96e3.png?width=750&format=png&optimize=medium');
+                        imgEl7.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_1fbe710066d25ab996b841e7ad68b1df88a1c96e3.png?width=750&format=png&optimize=medium');
                         imgEl7.setAttribute('width', '38');
                         imgEl7.setAttribute('height', '38');
                       pictureEl7.append(imgEl7);
@@ -342,25 +342,25 @@ export default function decorate(block) {
 
                 const sourceEl22 = document.createElement('source');
                 sourceEl22.setAttribute('type', 'image/webp');
-                sourceEl22.setAttribute('srcset', './media_1dac7d5058ffb3f2cbd15be3f85c4c9d56cb323af.png?width=2000&format=webply&optimize=medium');
+                sourceEl22.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1dac7d5058ffb3f2cbd15be3f85c4c9d56cb323af.png?width=2000&format=webply&optimize=medium');
                 sourceEl22.setAttribute('media', '(min-width: 600px)');
               pictureEl8.append(sourceEl22);
 
                 const sourceEl23 = document.createElement('source');
                 sourceEl23.setAttribute('type', 'image/webp');
-                sourceEl23.setAttribute('srcset', './media_1dac7d5058ffb3f2cbd15be3f85c4c9d56cb323af.png?width=750&format=webply&optimize=medium');
+                sourceEl23.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1dac7d5058ffb3f2cbd15be3f85c4c9d56cb323af.png?width=750&format=webply&optimize=medium');
               pictureEl8.append(sourceEl23);
 
                 const sourceEl24 = document.createElement('source');
                 sourceEl24.setAttribute('type', 'image/png');
-                sourceEl24.setAttribute('srcset', './media_1dac7d5058ffb3f2cbd15be3f85c4c9d56cb323af.png?width=2000&format=png&optimize=medium');
+                sourceEl24.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_1dac7d5058ffb3f2cbd15be3f85c4c9d56cb323af.png?width=2000&format=png&optimize=medium');
                 sourceEl24.setAttribute('media', '(min-width: 600px)');
               pictureEl8.append(sourceEl24);
 
                 const imgEl8 = document.createElement('img');
                 imgEl8.setAttribute('loading', 'lazy');
                 imgEl8.setAttribute('alt', '');
-                imgEl8.setAttribute('src', './media_1dac7d5058ffb3f2cbd15be3f85c4c9d56cb323af.png?width=750&format=png&optimize=medium');
+                imgEl8.setAttribute('src', 'https://main--prohomedemo--eds-dwao.aem.page/media_1dac7d5058ffb3f2cbd15be3f85c4c9d56cb323af.png?width=750&format=png&optimize=medium');
                 imgEl8.setAttribute('width', '495');
                 imgEl8.setAttribute('height', '359');
               pictureEl8.append(imgEl8);

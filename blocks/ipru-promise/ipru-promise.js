@@ -40,25 +40,25 @@ export default function decorate(block) {
 
                 const sourceEl = document.createElement('source');
                 sourceEl.setAttribute('type', 'image/webp');
-                sourceEl.setAttribute('srcset', './media_1717b5258342b47478ce91c3b33cb3b4ca299347e.png?width=2000&format=webply&optimize=medium');
+                sourceEl.setAttribute('srcset', 'https://www.iciciprulife.com/content/dam/ipru-homepage/bulb.svg');
                 sourceEl.setAttribute('media', '(min-width: 600px)');
               pictureEl.append(sourceEl);
 
                 const sourceEl2 = document.createElement('source');
                 sourceEl2.setAttribute('type', 'image/webp');
-                sourceEl2.setAttribute('srcset', './media_1717b5258342b47478ce91c3b33cb3b4ca299347e.png?width=750&format=webply&optimize=medium');
+                sourceEl2.setAttribute('srcset', 'https://www.iciciprulife.com/content/dam/ipru-homepage/bulb.svg');
               pictureEl.append(sourceEl2);
 
                 const sourceEl3 = document.createElement('source');
                 sourceEl3.setAttribute('type', 'image/png');
-                sourceEl3.setAttribute('srcset', './media_1717b5258342b47478ce91c3b33cb3b4ca299347e.png?width=2000&format=png&optimize=medium');
+                sourceEl3.setAttribute('srcset', 'https://www.iciciprulife.com/content/dam/ipru-homepage/bulb.svg');
                 sourceEl3.setAttribute('media', '(min-width: 600px)');
               pictureEl.append(sourceEl3);
 
                 const imgEl = document.createElement('img');
                 imgEl.setAttribute('loading', 'lazy');
                 imgEl.setAttribute('alt', '');
-                imgEl.setAttribute('src', './media_1717b5258342b47478ce91c3b33cb3b4ca299347e.png?width=750&format=png&optimize=medium');
+                imgEl.setAttribute('src', 'https://www.iciciprulife.com/content/dam/ipru-homepage/bulb.svg');
                 imgEl.setAttribute('width', '48');
                 imgEl.setAttribute('height', '48');
               pictureEl.append(imgEl);
@@ -84,7 +84,7 @@ export default function decorate(block) {
 
                 const sourceEl4 = document.createElement('source');
                 sourceEl4.setAttribute('type', 'image/webp');
-                sourceEl4.setAttribute('srcset', './media_15b4b6ebfc3046d968573b6765764ee96f6028555.png?width=2000&format=webply&optimize=medium');
+                sourceEl4.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_15b4b6ebfc3046d968573b6765764ee96f6028555.png?width=2000&format=webply&optimize=medium');
                 sourceEl4.setAttribute('media', '(min-width: 600px)');
               pictureEl2.append(sourceEl4);
 
@@ -128,7 +128,7 @@ export default function decorate(block) {
 
                 const sourceEl7 = document.createElement('source');
                 sourceEl7.setAttribute('type', 'image/webp');
-                sourceEl7.setAttribute('srcset', './media_10c18437e46a2d14b2c730ce0f206dfc20978441a.png?width=2000&format=webply&optimize=medium');
+                sourceEl7.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_10c18437e46a2d14b2c730ce0f206dfc20978441a.png?width=2000&format=webply&optimize=medium');
                 sourceEl7.setAttribute('media', '(min-width: 600px)');
               pictureEl3.append(sourceEl7);
 
@@ -172,7 +172,7 @@ export default function decorate(block) {
 
                 const sourceEl10 = document.createElement('source');
                 sourceEl10.setAttribute('type', 'image/webp');
-                sourceEl10.setAttribute('srcset', './media_126a6d63d8f9788e7e8d6746144f38465a8db7299.png?width=2000&format=webply&optimize=medium');
+                sourceEl10.setAttribute('srcset', 'https://main--prohomedemo--eds-dwao.aem.page/media_126a6d63d8f9788e7e8d6746144f38465a8db7299.png?width=2000&format=webply&optimize=medium');
                 sourceEl10.setAttribute('media', '(min-width: 600px)');
               pictureEl4.append(sourceEl10);
 

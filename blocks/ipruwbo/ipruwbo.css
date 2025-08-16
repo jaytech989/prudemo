@@ -18,7 +18,10 @@
     padding: 0 30px 0 14px !important;
 }
 
-.default-content-wrapper,
+.default-content-wrapper img{
+    margin-top: -28px;
+}
+
 .ipruwbo-wrapper {
     margin: 0 !important;
 }
