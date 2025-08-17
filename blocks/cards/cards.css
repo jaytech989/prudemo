@@ -1,22 +1,24 @@
 /* stylelint-disable no-descending-specificity */
 
-.section.ipru-hero.cards-container{
-  /* margin-bottom: 140px; */
-  /* height: 400px; */
+.section.ipru-hero.cards-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
 }
 
-.ipru-hero .cards-wrapper{
-position: relative;
+.ipru-hero .cards-wrapper {
+  position: relative;
 }
 
-.ipru-hero .cards
-{
+.ipru-hero .cards {
   display: flex;
   gap: 30px;
 }
-.indicators{
+
+.indicators {
   display: none !important;
 }
+
 .ipru-hero-wrapper {
   position: relative;
   max-width: 1250px !important;
@@ -47,7 +49,7 @@ position: relative;
 .prev,
 .next {
   position: absolute;
-    top: 48%;
+  top: 48%;
   transform: translateY(-50%);
   background-color: #fbcdbd;
   color: #f36523;
@@ -74,7 +76,7 @@ position: relative;
 }
 
 .prev {
-   left: 1%;
+  left: 1%;
 }
 
 .next {
@@ -105,7 +107,7 @@ position: relative;
 }
 
 .slide-body {
-  height: 278px;
+  /* height: 278px; */
   background-size: cover;
   position: relative;
   /* margin: 20px 30px; */
@@ -204,6 +206,7 @@ position: relative;
   margin-top: 4px;
   height: auto;
 }
+
 /* .slide-body {
   background-color: black;
   color: black;
@@ -221,9 +224,10 @@ position: relative;
   transition: transform 0.5s ease-in-out;
 } */
 
-.active{
+.active {
   display: block !important;
 }
+
 .cards-wrapper {
   overflow: hidden;
   width: 100%;
@@ -241,6 +245,7 @@ position: relative;
   flex-shrink: 0;
   height: auto;
 }
+
 .cards-wrapper {
   position: relative;
   overflow: hidden;
@@ -262,7 +267,7 @@ position: relative;
 .prev,
 .next {
   position: absolute;
-  top: 50%;
+  top: 180px;
   transform: translateY(-50%);
   background-color: #fbcdbd;
   color: #f36523;
@@ -279,12 +284,13 @@ position: relative;
 }
 
 .prev {
-  left: 10px;
+  left: -32px;
 }
 
 .next {
-  right: 10px;
+  right: -32px;
 }
+
 .cards-wrapper {
   position: relative;
   overflow: hidden;
@@ -298,18 +304,21 @@ position: relative;
 }
 
 .ipru-hero-slide {
-  flex: 0 0 100%;         /* Ensure each slide is full width */
+  flex: 0 0 100%;
+  /* Ensure each slide is full width */
   max-width: 100%;
   box-sizing: border-box;
 }
-main .slide-body img{
+
+/* main .slide-body img{
   margin-left: -57%;
-}
-@media (width >= 900px) {
-  main > .section > div {
-      padding: 0px !important;
+} */
+@media (width >=900px) {
+  main>.section>div {
+    padding: 0px !important;
   }
 }
+
 .slide-body {
   position: relative;
 
@@ -333,5 +342,3 @@ main .slide-body img{
   align-items: center;
   justify-content: center;
 }
-
-
