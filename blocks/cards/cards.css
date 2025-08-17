@@ -2,7 +2,7 @@
 
 .section.ipru-hero.cards-container{
   /* margin-bottom: 140px; */
-  height: 400px;
+  /* height: 400px; */
 }
 
 .ipru-hero .cards-wrapper{
@@ -31,6 +31,7 @@ position: relative;
 }
 
 .ipru-hero-slide {
+
   min-width: 100%;
   font-size: 24px;
   color: #333;
@@ -40,6 +41,7 @@ position: relative;
   display: flex;
   justify-content: center;
   position: relative;
+  display: none;
 }
 
 .prev,
@@ -198,7 +200,138 @@ position: relative;
 }
 
 .slide-body td img {
-  width: 16px;
+  /* width: 16px; */
   margin-top: 4px;
   height: auto;
 }
+/* .slide-body {
+  background-color: black;
+  color: black;
+  border: 5px solid black;
+} */
+/* .ipru-hero .cards-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.ipru-hero .cards {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+} */
+
+.active{
+  display: block !important;
+}
+.cards-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.cards {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.ipru-hero-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  height: auto;
+}
+.cards-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.ipru-hero-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fbcdbd;
+  color: #f36523;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.cards-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.ipru-hero-slide {
+  flex: 0 0 100%;         /* Ensure each slide is full width */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+main .slide-body img{
+  margin-left: -57%;
+}
+@media (width >= 900px) {
+  main > .section > div {
+      padding: 0px !important;
+  }
+}
+.slide-body {
+  position: relative;
+
+}
+
+.hero-cta {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 36px;
+  background-color: white;
+  border: 2px solid #f15a22;
+  color: #8e2727;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

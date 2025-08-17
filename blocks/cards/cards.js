@@ -1,74 +1,131 @@
 export default function decorate(block) {
-  debugger
+  // Wrap slides inside a .cards-wrapper
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('cards-wrapper');
 
-  const parent = block.closest('.ipru-hero'); // Find the parent with the ipru-hero class
+  // Move the block (which holds .ipru-hero-slide children) inside wrapper
+  block.parentNode.insertBefore(wrapper, block);
+  wrapper.appendChild(block);
 
-  // Create the 'prev' button
-  const prevButton = document.createElement('button');
-  prevButton.classList.add('prev');
-  prevButton.textContent = '❮'; // Add left arrow
+  // Add class to block for slide container styling
+  block.classList.add('cards');
 
-  // Create the 'next' button
-  const nextButton = document.createElement('button');
-  nextButton.classList.add('next');
-  nextButton.textContent = '❯'; // Add right arrow
+  // Process slides and content
+  const slides = [...block.children];
+  slides.forEach((row, r) => {
+    row.classList.add('ipru-hero-slide', `hero-slide-${r + 1}`);
+    if (r === 0) row.classList.add('active');
 
-  // Create the 'indicator' div
-  const indicatorDiv = document.createElement('div');
-  indicatorDiv.classList.add('indicators');
-
-  // Add 6 spans inside the 'indicator' div
-  for (let i = 1; i <= 6; i += 1) {
-    const span = document.createElement('span');
-    span.dataset.slide = i; // Add data attribute for slide number
-    span.classList.add('indicator');
-    if (i === 1) {
-      span.classList.add('active'); // Mark the first slide as active initially
-    }
-    indicatorDiv.appendChild(span);
-  }
-
-  // Add 'prev' button before the ipru-hero
-  parent.parentNode.insertBefore(prevButton, parent);
-
-  // Add 'next' button after the ipru-hero
-  parent.parentNode.insertBefore(nextButton, parent.nextSibling);
-
-  // Add 'indicator' div after the next button
-  parent.parentNode.insertBefore(indicatorDiv, nextButton.nextSibling);
-
-  // Process slides as before
-  [...block.children].forEach((row, r) => {
-    row.classList.add('ipru-hero-slide');
-    row.classList.add('hero-slide-'.concat(r + 1));
-    if (r === 0) {
-      row.classList.add('active');
-    }
     [...row.children].forEach((div, d) => {
-      
       if (d === 0) {
         div.classList.add('slide-body');
         const img = div.querySelector('img');
         if (img) {
+          // Optional: set background
           // div.style.backgroundImage = `url(${img.src})`;
           // img.remove();
         }
         const pTag = div.querySelector(':scope > p:first-child');
-        if (pTag) {
-          pTag.remove();
-        }
+        if (pTag) pTag.remove();
+        
       }
       const phead = div.querySelector('p');
-      if (phead) {
-        phead.classList.add('hero-cta');
-      }
+      if (phead) phead.classList.add('hero-cta');
 
-      // const table = div.querySelector('table');
-      // if (table) {
-      //   [...table.rows].forEach((tr, i) => {
-      //     tr.classList.add('tab-row-'.concat(i + 1));
-      //   });
-      // }
     });
   });
+
+  // ➕ Create navigation buttons
+  const prevBtn = document.createElement('button');
+  prevBtn.className = 'prev';
+  prevBtn.textContent = '❮';
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'next';
+  nextBtn.textContent = '❯';
+
+  wrapper.appendChild(prevBtn);
+  wrapper.appendChild(nextBtn);
+
+  // 🔁 Slide logic
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    if (index < 0) index = totalSlides - 1;
+    if (index >= totalSlides) index = 0;
+    currentSlide = index;
+    block.style.width = `${100 * totalSlides}%`;
+
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+  nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+  // Initial draw
+  showSlide(currentSlide);
 }
+
+// export default function decorate(block) {
+//   // Create wrapper
+//   const wrapper = document.createElement('div');
+//   wrapper.classList.add('cards-wrapper');
+
+//   // Add slide container class
+//   block.classList.add('cards');
+
+//   // Move block inside wrapper
+//   block.parentNode.insertBefore(wrapper, block);
+//   wrapper.appendChild(block);
+
+//   const slides = [...block.children];
+//   slides.forEach((row, r) => {
+//     row.classList.add('ipru-hero-slide', `hero-slide-${r + 1}`);
+//     if (r === 0) row.classList.add('active');
+
+//     [...row.children].forEach((div, d) => {
+//       if (d === 0) {
+//         div.classList.add('slide-body');
+//         const pTag = div.querySelector(':scope > p:first-child');
+//         if (pTag) pTag.remove();
+
+//         const cta = div.querySelector('p');
+//         if (cta) {
+//           cta.classList.add('hero-cta');
+//         }
+//       }
+//     });
+//   });
+
+//   // Create prev/next buttons
+//   const prevBtn = document.createElement('button');
+//   prevBtn.className = 'prev';
+//   prevBtn.textContent = '❮';
+
+//   const nextBtn = document.createElement('button');
+//   nextBtn.className = 'next';
+//   nextBtn.textContent = '❯';
+
+//   wrapper.appendChild(prevBtn);
+//   wrapper.appendChild(nextBtn);
+
+//   // Carousel logic
+//   let currentSlide = 0;
+//   const totalSlides = slides.length;
+
+//   function showSlide(index) {
+//     if (index < 0) index = totalSlides - 1;
+//     if (index >= totalSlides) index = 0;
+//     currentSlide = index;
+//     block.style.transform = `translateX(-${index * 100}%)`;
+//   }
+
+//   prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+//   nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+//   // Initialize
+//   showSlide(currentSlide);
+// }
